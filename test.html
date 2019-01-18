@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Engine</th>
+                <th>Browser</th>
+                <th>Platform</th>
+                <th>Version</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+    <script>
+    $(document).ready(function (){
+        var items =[];
+        var data;
+    var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://fort.com/api/v2/",
+  "method": "GET"
+}
+
+$.ajax(settings).done(function (response) {
+    for(x=0;x<response.results.data.item.length;x++){
+  items.push(response.results.data.item[x]);
+  //console.log(audits)
+}
+console.log(items)
+var json = {
+  BrowserStats : items
+};
+var data = jQuery.map(json.BrowserStats, function(el, i) {
+  return [[el.name, el.date, el.id, el.user]];
+});
+$('#example').dataTable( {
+  "aaData": data,
+  "aoColumns": [
+    { "sTitle": "Engine" },
+    { "sTitle": "Browser" },
+    { "sTitle": "Platform" },
+    { "sTitle": "Version"}
+  ]
+});
+});
+
+
+
+
+});
+    </script>
+</html>

@@ -1,0 +1,22 @@
+7c7efd4009474a0aff5c067bb66b4eed
+
+www.fitbit.com
+
+api.fitbit.com
+
+22DKGW
+
+https://nolandeluca.github.io/What-Can-I-Eat/callback
+
+
+https://dev.fitbit.com/apps/oauthinteractivetutorial?clientEncodedId=22DKGW&clientSecret=7c7efd4009474a0aff5c067bb66b4eed&redirectUri=https://nolandeluca.github.io/What-Can-I-Eat/callback&applicationType=SERVER
+
+
+
+https://api.fitbit.com/1/user/-/activities/date/2019-03-05.json
+Content-Type:
+application/json
+Header:
+Authorization:Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkRLR1ciLCJzdWIiOiI1V1RYUTciLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTUxODc1OTY2LCJpYXQiOjE1NTE4NDcxNjZ9.jF35rrQoCQInhiV0HiIarBu3JjJS_e4Scvgl6kDzG8g"
+
+
